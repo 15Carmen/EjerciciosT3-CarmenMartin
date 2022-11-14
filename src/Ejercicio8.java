@@ -9,7 +9,7 @@ public class Ejercicio8 {
      */
     public static void main(String[] args) {
         //Declaramos las variables
-        int numInicial;
+        int numIntroducido;
         int numMayor;
         int contadorNumeros = 0;
         int contadorFallos = 0;
@@ -17,23 +17,23 @@ public class Ejercicio8 {
         //Declaramos el scanner para poder leer por consola
         Scanner sc = new Scanner(System.in);
 
-        //Le pedimos al usuario que introduzca un numero entero y lo guardamos en la variable numInicial
+        //Le pedimos al usuario que introduzca un numero entero y lo guardamos en la variable numIntroducido
         System.out.println("Introduzca un numero entero: ");
-        numInicial= sc.nextInt();
-        numMayor=numInicial;                                //actualemte la variable mayor es la introducida inicialmente, así que decimos que numMayor es igual que numIncial
+        numIntroducido= sc.nextInt();
+        numMayor=numIntroducido;                            //actualmente la variable mayor es la introducida inicialmente, así que decimos que numMayor es igual que numIntroducido
 
-        while (numInicial!=0){                              //Mientras que numInicial sea distinto de 0
+        while (numIntroducido!=0){                          //Mientras que numIntroducido sea distinto de 0
             contadorNumeros++;                              //añadimos 1 al contador de numeros
 
-            if (numInicial<numMayor) {                      //Si el numero inicial es menor que el mayor introducido hasta el momento
+            if (numIntroducido<numMayor) {                  //Si el numero introducido es menor que el mayor introducido hasta el momento
                 System.out.println("Fallo es menor.");      //Imprimimos un mensaje de error
                 contadorFallos++;                           //Y sumamos 1 al contador de fallos
             }
 
-            numMayor=numInicial;                            //Volvemos a igualar el numero mayor al inicial para no perder
+            numMayor=numIntroducido;                        //Volvemos a igualar el numero mayor al introducido para no perder
                                                             //la variable mayor introducida hasta el momento,
             System.out.println("Introduzca un numero:");    //puesto que ahora vamos a pedir otro numero
-            numInicial= sc.nextInt();                       //que guardaremos en la variable numeroInicial
+            numIntroducido= sc.nextInt();                   //que guardaremos en la variable numeroIntroducido
         }
 
         //Cuando salga del bucle imprimimos el total de numeros introducidos y el total de fallados

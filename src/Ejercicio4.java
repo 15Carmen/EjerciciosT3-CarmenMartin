@@ -11,33 +11,32 @@ public class Ejercicio4 {
 
         //Declaramos las variables
         int numA, numB;
-        int mcd;
+        int mcd=1;
 
         //Declaramos el scanner para poder leer por consola
         Scanner sc = new Scanner(System.in);
 
         //Le pedios al usuario que introduzca dos numeros enteros y los guardamos en las variables declaradas anteriormente
         System.out.println("Introduzca un numero entero positivo: ");
-        numA=sc.nextInt();
+        numA = sc.nextInt();
         System.out.println("Introduzca otro numero entero positivo: ");
-        numB=sc.nextInt();
+        numB = sc.nextInt();
 
-        if (numA<0 || numB <0){
-            System.out.println("Te he dicho que tiene que ser positivo imbecil");
-        }else{
-            while (numA!=numB){
-                if (numA>numB){
-                    for (int i = numB; i <=1 ; i--) {
-                        if (numA % i == 0 && numB % i == 0){
-                            mcd = i;
-                        }
+        if (numA < 0 || numB < 0) {     //Si alguno de los numeros introducidos es negativo  lanzamos un mensaje de error
+            System.out.println("Valor introducido no valido, el numero debe ser positivo");
+        } else {                        //Si los numeros introducidos no son negativos
+
+                for (int i = 1; i <= numA && i <= numB; i++) {  //Inicializando el bucle en 1, lo terminamos en numA y numB y lo incrementamos en 1
+                    if (numA % i == 0 && numB % i == 0){        //Si numA modulo de i es igual a 0 y numB modulo de i es igual a =
+                        mcd = i;                                //El maximo comun divisor es la i
                     }
-                }else {
-
                 }
-            }
-
+                //Imprimimos el resultado por consola
+                System.out.printf("El MCD de %d y %d es: %d", numA, numB, mcd);
         }
+
+        //Cerramos el scanner
+        sc.close();
 
     }
 }
