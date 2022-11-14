@@ -21,19 +21,16 @@ public class Ejercicio2 {
             System.out.println("Numero no valido, debe ser positivo");
 
         } else {      //Si el numero entero es positivo
-            for (int i = 1; i <= num; i++) {
-
+            for (int i = 2; i <= num; i++) {
                 boolean primo = true;
-                int j = 2;
 
-                while (j <= i - 1 && primo == true) {
+                for (int j = 2; j < i; j++) {
                     if (i % j == 0){
                         primo = false;
+                        break;
                     }
-                    j++;
                 }
-
-                if (primo == true) {
+                if (primo) {
                     contadorPrimos++; // si es primo incrementamos el contador de primos
                     System.out.println(i + (" es primo"));
                 }
