@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Ejercicio6 {
     /*
     Realiza un programa que pida un número entero N entre 0 y 20 y luego muestre por pantalla los números desde 1
@@ -9,6 +11,24 @@ public class Ejercicio6 {
     55555
      */
     public static void main(String[] args) {
+        //Declaramos las variables
+        int numFilas;
 
+        //Declaramos el scanner para poder leer por teclado
+        Scanner sc = new Scanner(System.in);
+
+        //Le pedimos al usuario que introduzca el numero de filas que va a tener el triangulo y lo guardamos en la variable numFilas
+        System.out.println("Introduce el número de niveles que tendrá la pirámide: ");
+        numFilas = sc.nextInt();
+
+        for (int i = 1; i <= numFilas; i++) {   //Inicializamos el primer bucle en 1, lo terminamos en numFilas y lo incrementamos en 1
+            for (int j = 1; j <= i; j++) {      //Inicializamos el segundo bucle en 1, lo terminamos en i y lo incrementamos en 1
+                System.out.print(i);            //Imprimimos i
+            }
+            System.out.println();               //Hacemos un salto de linea
+        }
+
+        //Cerramos el scanner
+        sc.close();
     }
 }
