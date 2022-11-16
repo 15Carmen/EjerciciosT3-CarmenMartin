@@ -6,6 +6,26 @@ public class Ejercicio4 {
     mediante un algoritmo ineficiente pero sencillo: desde el menor de a y b, ir buscando, de forma decreciente, el
     primer número que divide a ambos simultáneamente. Teniendo en cuenta lo que se acaba de explicar, realiza un
     programa que calcule el máximo común divisor de dos números.
+
+    --Pruebas--
+            [1] Introducir dos numeros iguales y que imprima el mensaje de error configurado
+            numA=2, numB=2 -> RE: "Valores introducidos no validos, los dos numeros son iguales"
+                           -> RO: "Valores introducidos no validos, los dos numeros son iguales"
+                           
+            [2] Introducir un numero menor que 0 y que imprima el mensaje de error configurado
+            numA=0, numB=2 -> RE: "Valor introducido no valido, el numero debe ser positivo"
+                           -> RO: "Valor introducido no valido, el numero debe ser positivo"
+            numA=2, numB=0 -> RE: "Valor introducido no valido, el numero debe ser positivo"
+                           -> RO: "Valor introducido no valido, el numero debe ser positivo"
+
+             [3] El primer numero introducido es mayor que el segundo
+             numA=4, numB=2 -> RE: El MCD de 4 y 2 es: 2
+                            -> RO: El MCD de 4 y 2 es: 2
+
+             [4] El segundo numero introducido es mayor que el primero
+             numA=2, numB=4 -> RE: El MCD de 2 y 4 es: 2
+                            -> RO: El MCD de 2 y 4 es: 2
+
     */
     public static void main(String[] args) {
 
@@ -24,7 +44,7 @@ public class Ejercicio4 {
         numB = sc.nextInt();
 
         if (numA == numB) {                  //Si los numeros introducidos son iguales lanzamos un mensaje de error
-            System.out.println("Valores introducidos no válidos, los dos numeros son iguales");
+            System.out.println("Valores introducidos no validos, los dos numeros son iguales");
 
         } else if (numA < 0 || numB < 0) {   //Si alguno de los numeros introducidos son negativos lanzamos un mensaje de error
             System.out.println("Valor introducido no valido, el numero debe ser positivo");

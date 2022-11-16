@@ -7,6 +7,27 @@ public class Ejercicio7 {
         121
         12321
         1234321
+
+        --Pruebas--
+
+            [1] Introducir un numero menor que 0 y que imprima el mensaje de error configurado
+            numFilas=0 -> RE: "Valor introducido no valido, el numero debe ser positivo"
+                       -> RO: "Valor introducido no valido, el numero debe ser positivo"
+
+            [2] Introducir un 1 y que imprima solo la primera fila
+            numFilas=1 -> RE: 1
+                       -> RO: 1
+            [3] Introducir un numero positivo cualquiera y que imprima correctamente la pirámide
+            numFilas=5 -> RE: 1
+                              121
+                              12321
+                              1234321
+                              123454321
+                          RO: 1
+                              121
+                              12321
+                              1234321
+                              123454321
          */
     public static void main(String[] args) {
         //Daclaramos las variables
