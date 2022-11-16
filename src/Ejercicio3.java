@@ -7,6 +7,10 @@ public class Ejercicio3 {
           * *
          * * *
         * * * *
+
+    --Pruebas--
+
+
      */
     public static void main(String[] args) {
 

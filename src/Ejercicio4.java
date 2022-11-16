@@ -12,7 +12,7 @@ public class Ejercicio4 {
         //Declaramos las variables
         int numA, numB;
         int mcd = 1;
-        int numMenor = 0;
+        int numMenor;
 
         //Declaramos el scanner para poder leer por consola
         Scanner sc = new Scanner(System.in);
@@ -29,14 +29,14 @@ public class Ejercicio4 {
         } else if (numA < 0 || numB < 0) {   //Si alguno de los numeros introducidos son negativos lanzamos un mensaje de error
             System.out.println("Valor introducido no valido, el numero debe ser positivo");
 
-        } else {                             //Si los numeros introducidos no son negativos o iguales
+        } else {                            //Si los numeros introducidos no son negativos o iguales
 
             if (numA > numB){               //Si numA es menor que numB guardamos en numMenor el valor de numB
                 numMenor = numB;
             } else {                        //Si no, guardamos en menor el valor de numA
                 numMenor = numA;
             }
-            /* Creamos un bucle for que reecorra todos los números entre el menor de ambos números y 1
+            /* Creamos un bucle for que recorra todos los números entre el menor de ambos números y 1
              * Para ello, creamos una variable contador 'i' inicializada a 1
              * El bucle se repetirá mientras el valor de 'i' sea menor o igual a 1
              * Tras cada vuelta, decrementamos el valor de 'i' en 1

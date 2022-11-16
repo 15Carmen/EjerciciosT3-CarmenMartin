@@ -29,10 +29,8 @@ public class Ejercicio10 {
 
             while (aux != 0) {                   //Mientras aux sea distinto de 0.
                 unidad = aux % 10;               //Guardamos en la variable unidad el ultimo digito del numero auxiliar (esto lo hacemos gracias a hacer aux modulo de 10)
-
                 inverso = inverso * 10 + unidad; //Inverso es igual a su valor actual por 10 más la unidad (que acabamos de calcular)
                 aux = aux / 10;                  //Le quitamos la última cifra a aux.
-
             }
 
             if (num == inverso) {   //Si el numero introducido y su inverso son iguales imprimimos que es capicua
@@ -40,7 +38,6 @@ public class Ejercicio10 {
 
             } else {                //Si no son iguales imprimimos que no es capicua
                 System.out.println("No es capicua.");
-
             }
         }
         //Cerramos el scanner.

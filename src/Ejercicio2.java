@@ -3,6 +3,23 @@ import java.util.Scanner;
 public class Ejercicio2 {
     /*
     Realiza un programa que nos pida un número n y nos diga cuántos números hay entre 1 y n que sean primos.
+
+    --Pruebas--
+
+        [1] Introducir un numero menor o igual que 0 y que salga el mensaje de error configurado
+                numMAx=0 ->  Resultado Esperado (RE): "Valores introducidos no válidos".
+                         ->  Resultado Obtenido (RO): "Valores introducidos no válidos"
+                numMAx=-5 ->  Resultado Esperado (RE): "Valores introducidos no válidos".
+                          ->  Resultado Obtenido (RO): "Valores introducidos no válidos"
+
+        [2] Introducir un numero mayor que 0
+                numMAx=20 -> Resultado Esperado (RE): "En el rango 1 a 20, hay 8 numeros primos"
+                         ->  Resultado Obtenido (RO): "En el rango 1 a 20, hay 8 numeros primos"
+
+        [2] Introducir un 1 y que aparezca que no hay numeros primos
+                numMAx=1 -> Resultado Esperado (RE): "En el rango 1 a 1, hay 0 numeros primos"
+                         ->  Resultado Obtenido (RO): "En el rango 1 a 1, hay 0 numeros primos"
+
      */
     public static void main(String[] args) {
         //Declaramos las variables
@@ -17,7 +34,7 @@ public class Ejercicio2 {
         System.out.println("Introduzca un numero entero positivo: ");
         numMax = sc.nextInt();
 
-        if (numMax < 0) { //Si el numero introducido no es positivo lanzamos un mensaje de error
+        if (numMax <= 0) { //Si el numero introducido no es positivo lanzamos un mensaje de error
             System.out.println("Numero no valido, debe ser positivo");
 
         } else {      //Si el numero entero es positivo

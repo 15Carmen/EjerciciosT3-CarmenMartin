@@ -9,7 +9,45 @@ public class Ejercicio1 {
         Cantidad de segundos a incrementar
     La aplicación debe mostrar la nueva hora. Por ejemplo, si el usuario introduce hora=13, minutos=59 y segundos=51,
     y se desea incrementar en 10 segundos, el resultado a mostrar es 14:00:01.
+
+    --Pruebas--
+
+        [1] Introducir hora mayor que 24 y que salga el mensaje de error configurado
+                hora=27 ->  Resultado Esperado (RE): "Valores introducidos no válidos".
+                        ->  Resultado Obtenido (RO): "Valores introducidos no válidos"
+
+        [2] Introducir hora menor que 0 y que salga el mensaje de error configurado
+                hora=-8 -> RE: "Valores introducidos no válidos"
+                        -> RO: "Valores introducidos no válidos"
+
+        [3] Introducir minutos menor que 0 y que salga el mensaje de error configurado
+                hora=3, minutos=-5 -> RE: "Valores introducidos no válidos"
+                                   -> RO: "Valores introducidos no válidos"
+
+        [4] Introducir minutos mayor que 59 y que salga el mensaje de error configurado
+                hora=2, minutos=68 -> RE: "Valores introducidos no válidos"
+                                   -> RO: "Valores introducidos no válidos"
+
+        [5] Introducir segundos menor que 0 y que salga el mensaje de error configurado
+                hora=7. minutos=46, segundos=-18 -> RE: "Valores introducidos no válidos"
+                                                 -> RO: "Valores introducidos no válidos"
+
+        [6] Introducir segundos mayor que 59 y que salga el mensaje de error configurado
+                hora=7. minutos=46, segundos=73 -> RE: "Valores introducidos no válidos"
+                                                -> RO: "Valores introducidos no válidos"
+
+        [7] Introducir que el incremento sea 0 y que salga la hora sin incrementarse
+                hora=6, minutos=54, segundos=59 -> RE: 6:54:59
+                                                -> RO: 6:54:59
+
+        [8] Introducir valores validos para las horas, minutos y segundos e incremento mayor que 0 y que salga la hora
+        incrementada según los segundos especificados
+                hora=6, minutos=54, segundos=59 incremento=3 -> RE: 6:54:2
+                                                             -> RO: 6:55:2
+                hora=6, minutos=54, segundos=59 incremento=3600 -> RE: 7:54:59
+                                                                -> RO: 7:54:59
      */
+
     public static void main(String[] args) {
         //Declaramos las variables
         int horas, minutos, segundos; //Variables donde vamos a guardar los datos introducidos por el usuario
