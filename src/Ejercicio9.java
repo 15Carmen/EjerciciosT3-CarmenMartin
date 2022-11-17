@@ -4,6 +4,24 @@ public class Ejercicio9 {
     /*
     Realiza un programa que nos diga cuántos dígitos tiene un número introducido por teclado. El número introducido
     debe ser mayor que 0.
+
+    --Pruebas--
+            [1] Introducir un numero menor o igual que 0 y que imprima el mensaje de error configurado
+            num=0 -> RE: "Numero no válido, debe ser mayor que 0"
+                  -> RO: "Numero no válido, debe ser mayor que 0"
+
+            [2] Introducir un numero menor que 10 y que imprima que el numero tiene 1 cifra
+            num=5 -> RE: El numero tiene 1 cifras
+                  -> RO: El numero tiene 1 cifras
+
+            [3] Introducir un numero cualquiera y que imprima el numero de cifras que tiene
+            num=1234567 -> RE: El numero tiene 7 cifras
+                        -> RO: El numero tiene 7 cifras
+
+            [4] Introducir un numero de 20 cifras o más y que el programa de un error porque no soporta una cifra tan grande
+            num=1234567890 -> RE: Exception in thread "main" java.util.InputMismatchException: For input string: "12345678901234567890"
+                           -> RO: Exception in thread "main" java.util.InputMismatchException: For input string: "12345678901234567890"
+
      */
     public static void main(String[] args) {
 
